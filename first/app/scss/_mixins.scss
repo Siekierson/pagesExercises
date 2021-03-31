@@ -1,0 +1,22 @@
+@mixin header-button {
+  transition: 0.3s;
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+  width: 180px;
+  border-radius: 30px;
+  border-radius: 35px;
+}
+@mixin red-button {
+  background-color: $very-light-red;
+  color: white;
+}
+@mixin white-button {
+  background-color: #fff;
+  color: $light-red;
+}
+@mixin logo {
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-right: 5%;
+}

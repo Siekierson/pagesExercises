@@ -1,0 +1,100 @@
+header {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: linear-gradient(150deg, $very-light-red, $light-red);
+  color: $white-text;
+  z-index: 2;
+  padding: 3% 10%;
+  border-radius: 0 0 0 150px;
+  &:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../../images/bg-pattern-intro.svg) center;
+    background-size: 200%;
+    border-radius: 0 0 0 150px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  nav {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    h6 {
+      @include logo;
+    }
+    ul {
+      flex-grow: 2;
+      display: flex;
+      list-style-type: none;
+      li {
+        padding: 5px 20px;
+        a {
+          font-size: 2.2rem;
+          line-height: 200%;
+          span {
+            display: inline-block;
+            margin-left: 5px;
+            transform: rotate(90deg);
+            transition: 0.2s;
+          }
+          &:hover {
+            text-decoration: underline;
+            span {
+              transform: rotate(270deg);
+            }
+          }
+        }
+        .dropdown {
+          display: none;
+        }
+      }
+    }
+    div {
+      a {
+        @include header-button;
+        &:last-of-type {
+          @include white-button;
+          &:hover {
+            @include red-button;
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin: 15% 0 2%;
+  }
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .center-buttons {
+    margin: 7%;
+    text-align: center;
+    a {
+      @include header-button;
+      margin-right: 20px;
+      border: 2px solid white;
+      &:hover {
+        @include white-button;
+      }
+      &:first-of-type {
+        @include white-button;
+        &:hover {
+          @include red-button;
+          border: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+section {
+  color: $dark-blue;
+  h1 {
+    margin: 8%;
+    text-align: center;
+    font-size: 4rem;
+  }
+  .flex {
+    position: relative;
+    div {
+      width: 40%;
+      margin: 0 10%;
+
+      p {
+        font-size: 1.8rem;
+        margin: 5% 0 10%;
+      }
+    }
+    img {
+      position: absolute;
+      top: -40%;
+      left: 60%;
+    }
+    &__other {
+      margin: 15% 0;
+      display: block;
+      color: white;
+      background-image: linear-gradient(90deg, $dark-gray-blue, $dark-blue);
+      position: relative;
+      z-index: 2;
+      border-radius: 0 150px 0 150px;
+      &:after {
+        z-index: -1;
+        content: "";
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url(../../images/bg-pattern-circles.svg) -30% 80% no-repeat;
+        background-size: 70%;
+      }
+      div {
+        padding: 5% 10% 5% 50%;
+        p {
+          margin-top: 3%;
+        }
+      }
+      img {
+        top: -15%;
+        left: 10%;
+        height: 140%;
+        position: absolute;
+      }
+    }
+    &:last-of-type {
+      div {
+        margin: 0 10% 0 50%;
+      }
+      img {
+        left: -20%;
+      }
+    }
+  }
+}
